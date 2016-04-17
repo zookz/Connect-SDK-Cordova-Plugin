@@ -1773,7 +1773,9 @@ registerDeviceInterface("mediaControl",
      * @method
      * @success {playStateCallback}
      */
-    subscribePlayState: {}
+    subscribePlayState: {
+        subscribe: true
+    }
 });
 
 /** @class PlaylistControl */
