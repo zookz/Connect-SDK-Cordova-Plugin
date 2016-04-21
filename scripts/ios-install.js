@@ -62,7 +62,7 @@ if (!isMac) {
 			res.on('end', function() {
 				try {
 					var tmp_paths = JSON.parse(body);
-					paths = tmp_paths;
+					//paths = tmp_paths;
 				} catch(err) {
 					console.log("Error parsing updates, using default configuration (install might fail)");
 				}
@@ -127,6 +127,8 @@ if (!isMac) {
 
 	iOSInstall.prototype.downloadConnectSDK = function () {
 		var deferred = Q.defer();
+				deferred.resolve();
+		return deferred.promise;
 		console.log("Downloading ConnectSDK");
 		var file = fs.createWriteStream(safePath("./csdk_tmp/ConnectSDK.framework.zip"));
 		request.get(paths.ConnectSDK_Framework)
