@@ -16,6 +16,7 @@ allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    publishNonDefault true
     compileSdkVersion 22
     buildToolsVersion '22.0.1'
 
